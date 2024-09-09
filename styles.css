@@ -107,12 +107,18 @@ a {
     color: #1e90ff;
 }
 
-.nav-links li a i.fab.fa-github {
-    font-size: 1.5rem; /* Adjust the size of the GitHub icon */
+.nav-links li a i.fab.fa-github,
+.nav-links li a i.fab.fa-linkedin {
+    font-size: 1.5rem; /* Base size */
     transition: color 0.3s ease;
 }
 
-.nav-links li a:hover i.fab.fa-github {
+.nav-links li a i.fab.fa-linkedin {
+    transform: scale(1.2); /* Scale up LinkedIn icon */
+}
+
+.nav-links li a:hover i.fab.fa-github,
+.nav-links li a:hover i.fab.fa-linkedin {
     color: #1e90ff; /* Change color on hover */
 }
 
