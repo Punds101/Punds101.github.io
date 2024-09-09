@@ -139,8 +139,10 @@ a {
 }
 
 .about-image img {
-    border-radius: 50%;
+    border-radius: 50%; /* Circular profile image */
     max-width: 200px;
+    height: auto;
+    object-fit: cover;
 }
 
 .about-text {
