@@ -1,7 +1,3 @@
-Certainly! Here’s the updated README with a section for pull requests instead of contact information:
-
----
-
 # Dominik Könitzer's Website
 
 This repository contains the source code for my personal website, designed to showcase my work as a software engineer and expand my professional portfolio.
