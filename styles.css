@@ -274,11 +274,49 @@ a {
 
 /* Footer */
 #footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #fff; /* Fully white background */
+    color: #333; /* Dark text for contrast */
+    padding: 40px 0;
     text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for definition */
 }
+
+#footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-social-icons {
+    margin-bottom: 20px;
+}
+
+.footer-social-icons a {
+    color: #333; /* Dark color for icons to match the text */
+    font-size: 2.5rem; /* Increased icon size */
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    color: #1e90ff; /* Subtle blue color on hover for interaction */
+}
+
+/* Footer Name Styling */
+.footer-name {
+    font-size: 3rem; /* Larger font size */
+    font-weight: bold; /* Bold for emphasis */
+    letter-spacing: 2px; /* Spacing between letters for a modern look */
+    text-shadow: 0px 0px 15px rgba(30, 144, 255, 0.5), 0px 0px 30px rgba(30, 144, 255, 0.3); /* Aura effect */
+    color: #333;
+    margin-top: 20px;
+    transition: text-shadow 0.3s ease;
+}
+
+.footer-name:hover {
+    text-shadow: 0px 0px 25px rgba(30, 144, 255, 0.8), 0px 0px 50px rgba(30, 144, 255, 0.6); /* Increased aura effect on hover */
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
