@@ -160,13 +160,42 @@ a {
     margin-bottom: 20px;
 }
 
-/* Skills Section */
+/* Skills Icons */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    text-align: center;
+    text-align: center; /* Center the skills */
+    align-items: center; /* Ensure proper alignment of icons and text */
 }
+
+.skills-grid .skill-item {
+    text-align: center; /* Center the icon and text */
+}
+
+.skills-grid .skill-item i {
+    font-size: 2rem; /* Increase icon size for better visibility */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+.skills-grid .skill-item h4 {
+    margin-top: 10px; /* Add some space between the icon and the title */
+}
+
+.skills-grid .skill-item p {
+    margin-top: 10px;
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-grid .skill-item i {
+        font-size: 1.8rem; /* Slightly smaller on mobile devices */
+    }
+}
+
+
 
 /* Contact Section */
 #contact {
