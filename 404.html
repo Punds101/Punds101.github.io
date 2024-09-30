@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        /* General Styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to bottom right, #e7f1ff, #a7c7e7); /* ONE continuous gradient background */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Ensures footer stays at the bottom */
+            min-height: 100vh; /* Ensures the body covers the full height of the viewport */
+        }
+
+        /* 404 Error Styling */
+        h1 {
+            font-size: 180px; /* Large 404 text */
+            margin: 0;
+            color: #1e90ff; /* Blue color for 404 */
+            text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1); /* Light shadow for clarity */
+        }
+
+        /* Description */
+        p {
+            font-size: 24px;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        /* Button Styling */
+        .btn {
+            padding: 20px 60px;
+            background-color: #1e90ff; /* Blue button */
+            color: white;
+            border: none;
+            border-radius: 50px; /* Rounded button */
+            cursor: pointer;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(30, 144, 255, 0.3); /* Soft shadow */
+            text-decoration: none;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .btn:hover {
+            background-color: #4169e1; /* Darker blue on hover */
+            box-shadow: 0 6px 15px rgba(30, 144, 255, 0.5); /* Enhanced shadow on hover */
+        }
+
+        /* Footer Styling */
+        footer {
+            width: 100%;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+            /* No separate background here, we let the page background continue */
+        }
+
+        /* Container for Centering Content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1; /* Ensures the content grows to fill available space */
+        }
+
+        /* Responsive Layout Adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 120px; /* Adjust 404 size for smaller screens */
+            }
+
+            p {
+                font-size: 20px;
+                padding: 0 15px;
+            }
+
+            .btn {
+                font-size: 20px;
+                padding: 15px 40px;
+            }
+
+            footer {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 90px; /* Adjust 404 size for very small screens */
+            }
+
+            p {
+                font-size: 18px;
+                padding: 0 10px;
+            }
+
+            .btn {
+                font-size: 18px;
+                padding: 12px 30px;
+            }
+
+            footer {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>404</h1>
+        <p>Sorry, we couldn't find the page you’re looking for.</p>
+        <a class="btn" href="/">Return to Homepage</a>
+    </div>
+
+    <footer>
+        &copy; Copyright • All rights reserved
+    </footer>
+
+</body>
+</html>
