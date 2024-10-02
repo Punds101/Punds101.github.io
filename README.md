@@ -1,3 +1,7 @@
+Here's the updated README with proper formatting:
+
+---
+
 # Dominik Könitzer's Website
 
 This repository contains the source code for my personal website, designed to showcase my work as a software engineer and expand my professional portfolio.
@@ -12,11 +16,11 @@ This website serves as a central hub for displaying my projects, skills, and pro
 - **Skills**: Overview of my technical expertise.
 - **Contact**: Form to reach out for collaborations or inquiries.
 
-## Contributing
-
-If you’d like to contribute to this project, please feel free to submit a pull request or open an issue. Your feedback and contributions are welcome!
-
 ## Acknowledgments
 
 - **WISS Schulen für Wirtschaft Informatik Immobilien**: For providing the foundational education and skills development.
 - **GitHub**: For hosting and version control.
+
+## Contact Me
+
+If you'd like to get in touch regarding collaborations or inquiries, please reach out through the contact form on my website: [Contact Me](https://dominikkoenitzer.ch/#contact).
