@@ -1,7 +1,3 @@
-Here's the updated README with proper formatting:
-
----
-
 # Dominik Könitzer's Website
 
 This repository contains the source code for my personal website, designed to showcase my work as a software engineer and expand my professional portfolio.
