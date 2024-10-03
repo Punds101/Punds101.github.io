@@ -326,3 +326,31 @@ a {
         margin-bottom: 20px;
     }
 }
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(to bottom, #6a0dad, #1a0033); /* Purple gradient for the body */
+    color: #ffffff; /* White text */
+}
+
+/* Ensure the background-slot also changes */
+body.dark-mode #background-slot {
+    background: linear-gradient(to bottom, #6a0dad, #1a0033); /* Purple gradient */
+}
+
+/* Other dark mode styles */
+body.dark-mode a {
+    color: #ffffff; /* White links */
+}
+
+body.dark-mode #header {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark header background */
+}
+
+body.dark-mode .section-header h2,
+body.dark-mode .footer-name,
+body.dark-mode .footer-copyright,
+body.dark-mode #home h1,
+body.dark-mode #home p {
+    color: #ffffff; /* White text for headings and content */
+}
