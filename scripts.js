@@ -28,3 +28,16 @@ document.querySelectorAll('.footer-social-icons a, .nav-links a').forEach(icon =
         }
     });
 });
+
+// Dark Mode Toggle
+const toggleButton = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+toggleButton.addEventListener('click', function () {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️ Light Mode'; // Switch the button text
+    } else {
+        toggleButton.textContent = '🌙 Dark Mode'; // Switch the button text
+    }
+});
