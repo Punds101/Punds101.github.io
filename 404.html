@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,113 +12,128 @@
             padding: 0;
             height: 100%;
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(to bottom right, #e7f1ff, #a7c7e7); /* ONE continuous gradient background */
+            background: linear-gradient(to bottom right, #e7f1ff, #a7c7e7);
         }
 
         body {
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Ensures footer stays at the bottom */
-            min-height: 100vh; /* Ensures the body covers the full height of the viewport */
+            justify-content: space-between;
+            min-height: 100vh;
         }
 
-        /* 404 Error Styling */
         h1 {
-            font-size: 180px; /* Large 404 text */
+            font-size: 180px;
             margin: 0;
-            color: #1e90ff; /* Blue color for 404 */
-            text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1); /* Light shadow for clarity */
+            color: #1e90ff;
         }
 
-        /* Description */
         p {
             font-size: 24px;
             color: #333;
             margin: 20px 0;
         }
 
-        /* Button Styling */
         .btn {
             padding: 20px 60px;
-            background-color: #1e90ff; /* Blue button */
+            background-color: #1e90ff; /* Blue background */
             color: white;
             border: none;
-            border-radius: 50px; /* Rounded button */
+            border-radius: 50px;
             cursor: pointer;
             font-size: 24px;
-            box-shadow: 0 4px 10px rgba(30, 144, 255, 0.3); /* Soft shadow */
             text-decoration: none;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
             margin-top: 30px;
         }
 
         .btn:hover {
-            background-color: #4169e1; /* Darker blue on hover */
-            box-shadow: 0 6px 15px rgba(30, 144, 255, 0.5); /* Enhanced shadow on hover */
+            background-color: #4169e1;
         }
 
-        /* Footer Styling */
         footer {
             width: 100%;
             font-size: 20px;
             color: #333;
             text-align: center;
             padding: 20px 0;
-            /* No separate background here, we let the page background continue */
         }
 
-        /* Container for Centering Content */
         .container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-grow: 1; /* Ensures the content grows to fill available space */
+            flex-grow: 1;
         }
 
-        /* Responsive Layout Adjustments */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 120px; /* Adjust 404 size for smaller screens */
-            }
-
-            p {
-                font-size: 20px;
-                padding: 0 15px;
-            }
-
-            .btn {
-                font-size: 20px;
-                padding: 15px 40px;
-            }
-
-            footer {
-                font-size: 18px;
-            }
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background: linear-gradient(to bottom, #6a0dad, #1a0033);
+            color: #ffffff;
         }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 90px; /* Adjust 404 size for very small screens */
-            }
+        body.dark-mode h1,
+        body.dark-mode p,
+        body.dark-mode footer {
+            color: #ffffff;
+        }
 
-            p {
-                font-size: 18px;
-                padding: 0 10px;
-            }
+        body.dark-mode .btn {
+            background-color: #1e90ff; /* Solid blue background for button in dark mode */
+            color: #ffffff;
+        }
 
-            .btn {
-                font-size: 18px;
-                padding: 12px 30px;
-            }
+        /* Dark Mode Toggle Button */
+        #dark-mode-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-radius: 50%;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
 
-            footer {
-                font-size: 16px;
-            }
+        #dark-mode-toggle:hover {
+            color: #1e90ff;
+            background-color: rgba(30, 144, 255, 0.1);
+        }
+
+        #dark-mode-toggle .feather {
+            width: 24px;
+            height: 24px;
+        }
+
+        #dark-mode-toggle .light-icon {
+            display: none;
+            color: #ffffff;
+        }
+
+        body.dark-mode #dark-mode-toggle .dark-icon {
+            display: none;
+        }
+
+        body.dark-mode #dark-mode-toggle .light-icon {
+            display: block;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 </head>
+
 <body>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i data-feather="moon" class="dark-icon"></i>
+        <i data-feather="sun" class="light-icon"></i>
+    </button>
 
     <div class="container">
         <h1>404</h1>
@@ -128,6 +144,41 @@
     <footer>
         Copyright • All rights reserved
     </footer>
+
+    <script>
+        // Dark Mode Toggle Script
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', function () {
+            body.classList.toggle('dark-mode');
+            updateIcon();
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        function updateIcon() {
+            const darkIcon = toggleButton.querySelector('.dark-icon');
+            const lightIcon = toggleButton.querySelector('.light-icon');
+            if (body.classList.contains('dark-mode')) {
+                darkIcon.style.display = 'none';
+                lightIcon.style.display = 'block';
+            } else {
+                darkIcon.style.display = 'block';
+                lightIcon.style.display = 'none';
+            }
+        }
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+        }
+
+        // Initial icon state
+        updateIcon();
+
+        // Load Feather icons
+        feather.replace();
+    </script>
 
 </body>
 </html>
