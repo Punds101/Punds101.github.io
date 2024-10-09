@@ -12,6 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/Favicon.png">
     <link rel="icon" href="images/Favicon.png">
@@ -28,32 +29,28 @@
     <div id="background-slot"></div>
 
     <header id="header">
-        <nav id="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1><a href="#home">Dominik Könitzer</a></h1>
-                </div>
+        <div class="container">
+            <div class="header-left">
+                <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i data-feather="moon" class="dark-icon"></i>
+                    <i data-feather="sun" class="light-icon"></i>
+                </button>
+            </div>
+            <div class="logo">
+                <h1><a href="#home">Dominik Könitzer</a></h1>
+            </div>
+            <nav>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li>
-                        <a href="https://github.com/Punds101" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/dominik-koenitzer/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <button id="dark-mode-toggle" style="cursor: pointer;">🌙 Dark Mode</button>
-                    </li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="https://github.com/Punds101" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/dominik-koenitzer/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
     
 
@@ -211,6 +208,19 @@
                 </div>
                 <button type="submit">Send Message</button>
             </form>
+        </div>
+    </section>
+
+    <section id="donate" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Support My Efforts</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="donate-content">
+                <p>Your support means a lot to me and helps me continue my work in software development. If you'd like to contribute, you can make a donation through PayPal. Every bit helps, and I'm grateful for your support!</p>
+                <a href="https://www.paypal.com/paypalme/dominikkoenitzer" class="donate-btn" target="_blank">Donate via PayPal</a>
+            </div>
         </div>
     </section>
 
