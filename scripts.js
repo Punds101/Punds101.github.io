@@ -35,9 +35,28 @@ const body = document.body;
 
 toggleButton.addEventListener('click', function () {
     body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-        toggleButton.textContent = '☀️ Light Mode'; // Switch the button text
-    } else {
-        toggleButton.textContent = '🌙 Dark Mode'; // Switch the button text
-    }
+    updateIcon();
+    localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
 });
+
+function updateIcon() {
+    const darkIcon = toggleButton.querySelector('.dark-icon');
+    const lightIcon = toggleButton.querySelector('.light-icon');
+    if (body.classList.contains('dark-mode')) {
+        darkIcon.style.display = 'none';
+        lightIcon.style.display = 'block';
+    } else {
+        darkIcon.style.display = 'block';
+        lightIcon.style.display = 'none';
+    }
+}
+
+// Check for saved dark mode preference
+if (localStorage.getItem('darkMode') === 'true') {
+    body.classList.add('dark-mode');
+}
+
+// Initial icon state
+updateIcon();
+
+feather.replace();
