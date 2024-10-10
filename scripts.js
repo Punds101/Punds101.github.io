@@ -29,6 +29,21 @@ document.querySelectorAll('.footer-social-icons a, .nav-links a').forEach(icon =
     });
 });
 
+document.querySelectorAll('#services .cta-btn').forEach(button => {
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+
 // Dark Mode Toggle
 const toggleButton = document.getElementById('dark-mode-toggle');
 const body = document.body;
